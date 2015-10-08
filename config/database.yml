@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: spread_threads_development
+
+test:
+  <<: *default
+  database: spread_threads_test
+
+production:
+  <<: *default
+  database: spread_threads_production
+  username: spread_threads
+  password: <%= ENV['SPREAD_THREADS_DATABASE_PASSWORD'] %>
