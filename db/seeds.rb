@@ -2,7 +2,7 @@ class SeedItem
   def self.create_items(number_of_items)
     number_of_items.times do
       item = Item.create!(title: Faker::App.name,
-                          blurb: Faker::Lorem.sentence(3),
+                          blurb: Faker::Lorem.sentence(50),
                           author: Faker::App.author,
                           thumbnail_url: Faker::Avatar.image,
                           details_url: Faker::Internet.url('example.com', '/foobar.html'))
