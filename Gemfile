@@ -20,5 +20,6 @@ group :development, :test do
   gem "rspec-rails"
   gem "pry-rails"
   gem "rspec_api_documentation"
+  gem "database_cleaner"
 end
 
