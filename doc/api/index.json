@@ -1,0 +1,14 @@
+{
+  "resources": [
+    {
+      "name": "Items",
+      "examples": [
+        {
+          "description": "return a collection of items",
+          "link": "items/return_a_collection_of_items.json",
+          "groups": "all"
+        }
+      ]
+    }
+  ]
+}

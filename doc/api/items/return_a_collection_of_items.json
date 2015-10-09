@@ -1,0 +1,53 @@
+{
+  "resource": "Items",
+  "http_method": "GET",
+  "route": "/api/v1/items",
+  "description": "return a collection of items",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "page",
+      "description": "page scope"
+    },
+    {
+      "name": "per_page",
+      "description": "items per page (default value is 20)"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/items?page=1&per_page=5",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "per_page": "5"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[{\"id\":1,\"title\":\"Latex gloves\",\"blurb\":\"for my importing/exporting business\",\"author\":\"Art Vandelay\",\"thumbnail_url\":null,\"details_url\":null,\"created_at\":\"2015-10-09T04:33:17.005Z\",\"updated_at\":\"2015-10-09T04:33:17.005Z\"},{\"id\":2,\"title\":\"Home Ing\",\"blurb\":\"Laboriosam repudiandae corporis qui porro voluptatibus ut.\",\"author\":\"Hester Herman\",\"thumbnail_url\":null,\"details_url\":null,\"created_at\":\"2015-10-09T04:33:17.214Z\",\"updated_at\":\"2015-10-09T04:33:17.214Z\"},{\"id\":3,\"title\":\"Zathin\",\"blurb\":\"Assumenda sequi et at aut et.\",\"author\":\"Gulgowski-Cruickshank\",\"thumbnail_url\":null,\"details_url\":null,\"created_at\":\"2015-10-09T04:33:17.216Z\",\"updated_at\":\"2015-10-09T04:33:17.216Z\"},{\"id\":4,\"title\":\"Otcom\",\"blurb\":\"Ea deserunt officiis iure accusamus ex est doloribus.\",\"author\":\"Mr. Susan Larkin\",\"thumbnail_url\":null,\"details_url\":null,\"created_at\":\"2015-10-09T04:33:17.218Z\",\"updated_at\":\"2015-10-09T04:33:17.218Z\"},{\"id\":5,\"title\":\"Alphazap\",\"blurb\":\"Numquam vel et tempora ea ipsa ut.\",\"author\":\"Emory Konopelski\",\"thumbnail_url\":null,\"details_url\":null,\"created_at\":\"2015-10-09T04:33:17.220Z\",\"updated_at\":\"2015-10-09T04:33:17.220Z\"}]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"15e7ee8c22cadbb0201a3f6fb71bbc69\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "3cd6e1c6-3226-4913-8515-29fad5f0c2e0",
+        "X-Runtime": "0.029984",
+        "Content-Length": "1142"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000/api/v1/items?page=1&per_page=5\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}
