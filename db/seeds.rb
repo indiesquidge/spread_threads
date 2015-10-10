@@ -3,7 +3,7 @@ class SeedItem
     number_of_items.times do
       item = Item.create!(title: Faker::App.name,
                           blurb: Faker::Lorem.sentence(rand(5..40)),
-                          author: Faker::App.author,
+                          author: Faker::Name.name,
                           thumbnail_url: Faker::Avatar.image,
                           details_url: Faker::Internet.url('example.com', '/foobar.html'))
 
