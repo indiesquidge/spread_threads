@@ -1,6 +1,6 @@
 .items img {
-  width: 200px;
-  height: 200px;
+  width: auto;
+  height: auto;
 }
 
 .items :nth-child(4n+1) {
