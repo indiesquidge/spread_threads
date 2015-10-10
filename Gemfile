@@ -8,6 +8,7 @@ gem "coffee-rails", "~> 4.1.0"
 gem "faker"
 gem "kaminari"
 gem "apitome"
+gem "figaro"
 
 gem "jquery-rails"
 gem "jbuilder", "~> 2.0"
