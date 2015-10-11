@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
-  root "dashboard#index"
+  root "items#index"
 
-  namespace :api do
-    namespace :v1 do
-      resources :items
-    end
-  end
+  resources :items
 end

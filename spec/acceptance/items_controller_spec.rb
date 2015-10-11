@@ -20,7 +20,7 @@ resource "Items" do
                               author: "H.E. Pennypacker",) }
 
   context "#index" do
-    get "/api/v1/items" do
+    get "/items" do
       parameter :page, "page scope"
       parameter :per_page, "items per page (default value is 20)"
       let(:page) { 1 }
