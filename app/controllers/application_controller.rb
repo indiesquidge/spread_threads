@@ -2,7 +2,7 @@ require "application_responder"
 
 class ApplicationController < ActionController::Base
   self.responder = ApplicationResponder
-  respond_to :json
+  respond_to :json, :html, :js
 
   protect_from_forgery with: :null_session
 end
