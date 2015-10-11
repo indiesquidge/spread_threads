@@ -18,6 +18,11 @@ Install dependencies
 bundle install
 ```
 
+Setup environment
+```sh
+rake db:setup
+```
+
 Make sure the tests are passing
 ```sh
 rspec
@@ -40,6 +45,58 @@ content._
 post title, and the blurb field, truncated to display 32 words and featuring a
 "Read more" link. The backend should have 20 items per page and deliver at least
 3 pages of data._
+
+ > _Deliverable should be runnable, e.g can be a deployed Heroku app or a
+codebase on GitHub, with a README showing how to run this. Extra points for
+unit-tests, code formatting/conventions, and comments around the code._
+
+I just want to point out a few minor cases where I strayed away from the exact
+specifications. First, I did not end up displaying a truncated blurb field on
+each item because it often turns out to look like this
+
+![Items with truncated blurb](http://i.imgur.com/Pjb4PY3.png)
+
+Which is just ugly. Now I could impose some sort of div height limit, or
+truncate at exactly the same place for every item, or \<insert other fancy work
+around here\>, but I thought that just displaying the item title was enough. It
+keeps the page clean, it keeps the rows formatted, it's less noisy, and I found
+a very easy way to show the item's details without a page load or AJAX call or
+modal, making it easy to load and keeping it responsive.
+
+![Item cards](http://i.imgur.com/sfQcHf4.gif)
+
+This negates the need for the `details_url` property of each item. I have
+left that piece of data in the application in case the client is set on the
+truncation and I can't convince them otherwise. One reason I could see the
+truncation being needed is if the client wanted a search feature for filtering
+items based on their blurbs, but that isn't the case for this mock-up.
+
+---
+
+The second thing I did not do was implement unit tests. This application is
+(very) small right now, and only contains one model, `Item`. By the
+specifications, there isn't even a feature to create new items. This nullifies
+the need for any unit tests on `Item` since we have no validations to begin
+with, only pre-made seed data to display. Even if there were validations on the
+model (i.e. "an item must have a title to be valid"), those validations are
+tested on the `validate` method in Rails itself. It wouldn't only make sense to
+have unit tests if I had authorization permissions for items, validations or
+filters (i.e. this is where truncating the blurb would come in), or any other
+custom methods.
+
+As it stands, I can only really see two things that need to be tested. Whether
+or not my API calls work and their corresponding parameters, and whether or not
+infinite scroll is working as the user traverses the page.
+
+---
+
+The last thing I did not do is write any comments in the code. For high level
+languages such as Ruby or JavaScript, I believe the code should speak for
+itself. If I have written something that another developer does not understand
+or cannot follow, then I have failed and probably need to re-write my code.
+
+> _"Programs must be written for people to read, and only incidentally for
+machines to execute." -Abelson and Sussman_
 
 #### Technical Challenges While Building
 For the most part this project went smoothly. I have built my own Rails API
@@ -100,3 +157,7 @@ allowing my API to respond to HTML and JS on top of JSON, giving me the best of
 all worlds. I could load the first page of data directly from Rails into the
 view using HTML, each subsequent call would be made using AJAX and responding
 with JavaScript, and the API still responds with JSON to outside consumers.
+
+#### Ideas for the Future
+- [ ] Sorting and Filtering option
+- [ ] Use Angular, React, or Ember for the front-end
