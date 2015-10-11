@@ -2,4 +2,5 @@ $('.items').append('<%= escape_javascript(render partial: "shared/items", locals
 $('a.load-more-items').attr('href', '<%= items_path page: @items.next_page %>');
 <% unless @items.next_page %>
   $('a.load-more-items').remove();
+  $('#more-items').append('<p>Congratulations, you\'ve reached the end of the Internet.</p>');
 <% end %>
