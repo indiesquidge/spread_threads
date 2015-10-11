@@ -1,3 +1,10 @@
 <div class="items">
   <%= render partial: "shared/items", locals: { items: @items } %>
 </div>
+<% if @items.next_page %>
+  <div class="row">
+    <div class="center">
+      <%= link_to "Load More Items", items_path(page: @items.next_page), class: "load-more-items", remote: true %>
+    </div>
+  </div>
+<% end %>
