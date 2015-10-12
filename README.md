@@ -185,5 +185,6 @@ messed up my placement of the `title` class and had my icon wrapped in the div,
 thus causing the issue with only those six letters.
 
 #### Ideas for the Future
-- [ ] Sorting and Filtering option
+- [x] Filtering option
+- [ ] Sorting option
 - [ ] Use Angular, React, or Ember for the front-end
