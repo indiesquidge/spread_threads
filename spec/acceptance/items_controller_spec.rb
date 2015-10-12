@@ -8,11 +8,7 @@ resource "Items" do
                               author: "Art Vandelay",) }
 
   before :each do
-    4.times do
-      Item.create!(title: Faker::App.name,
-                   blurb: Faker::Lorem.sentence(3),
-                   author: Faker::App.author)
-    end
+    Fabricate.times(4, :item)
   end
 
   let!(:item2) { Item.create!(title: "Mining Drill",
