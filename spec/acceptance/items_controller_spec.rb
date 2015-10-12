@@ -2,6 +2,7 @@ require "acceptance_helper"
 
 resource "Items" do
   header "Accept", "application/json"
+  header "Host", "https://spreadthreads.herokuapp.com"
 
   let!(:item1) { Item.create!(title: "Latex gloves",
                               blurb: "for my importing/exporting business",
