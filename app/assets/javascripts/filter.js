@@ -9,7 +9,7 @@ function listFilter(header, list) {
   };
 
   var form = $('<form>').attr({'class':'filterform', 'action':'#'});
-  var input = $('<input>').attr({'class':'filterinput', 'type':'text'});
+  var input = $('<input>').attr({'class':'filterinput', 'type':'text', 'placeholder':'Filter'});
   $(form).append(input).appendTo(header);
 
   $(input).change(function () {
