@@ -1,6 +1,10 @@
-<div class="items">
+<div id="header">
+</div>
+
+<div id="items">
   <%= render partial: "shared/items", locals: { items: @items } %>
 </div>
+
 <% if @items.next_page %>
   <div class="row">
     <div class="center" id="more-items">

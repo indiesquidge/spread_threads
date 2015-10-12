@@ -1,4 +1,4 @@
-$('.items').append('<%= escape_javascript(render partial: "shared/items", locals: { items: @items }) %>');
+$('#items').append('<%= escape_javascript(render partial: "shared/items", locals: { items: @items }) %>');
 $('a.load-more-items').attr('href', '<%= items_path page: @items.next_page %>');
 <% unless @items.next_page %>
   $('a.load-more-items').remove();
