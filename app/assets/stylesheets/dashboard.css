@@ -12,3 +12,7 @@ nav .nav-wrapper { height: 95% !important; }
 .items :nth-child(4n+1) {
   clear: left;
 }
+
+.item .title {
+  float: left;
+}

@@ -168,6 +168,22 @@ all worlds. I could load the first page of data directly from Rails into the
 view using HTML, each subsequent call would be made using AJAX and responding
 with JavaScript, and the API still responds with JSON to outside consumers.
 
+#### Known Bugs
+For some reason (unknown to me), my search filtering will not work when _some_
+individual letters are typed in to the input. For example, if I type in "o",
+absolutely nothing changes on the screen; items not containing the letter "o"
+are still present. Of course if I type more letters after "o", the filtering
+works as it should. The curious part is that other letters, such as "q", will
+filter the items just fine.
+
+**FIXED**: So I sat and tried each letter to see which ones were causing the
+issue and which ones were working fine. It was kind of like a fun game of
+hangman, and in the end I ended up winning when I noticed that the letters that
+were "broken" were "e, r, t, o, v, m", _exactly_ the same letters that are
+being used to render the vertical ellipses on each item, `more_vert`. I had
+messed up my placement of the `title` class and had my icon wrapped in the div,
+thus causing the issue with only those six letters.
+
 #### Ideas for the Future
 - [ ] Sorting and Filtering option
 - [ ] Use Angular, React, or Ember for the front-end
