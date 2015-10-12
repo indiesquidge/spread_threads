@@ -5,13 +5,12 @@
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <%= csrf_meta_tags %>
   </head>
   <body>
 
     <%= render partial: "shared/navbar" %>
     <%= yield %>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+
   </body>
 </html>

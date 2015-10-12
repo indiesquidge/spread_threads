@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require materialize-sprockets
 //= require jquery_ujs
 //= require_tree .
 //= require jquery.inview.min.js

@@ -9,6 +9,7 @@ gem "faker"
 gem "kaminari"
 gem "apitome"
 gem "figaro"
+gem "materialize-sass"
 
 gem "jquery-rails"
 gem "jbuilder", "~> 2.0"
