@@ -28,10 +28,10 @@ Make sure the tests are passing
 rspec
 ```
 
-**NOTE**: Keep in mind that `Capybara's` driver, `selenium`, requires you to have
+**NOTE**: Keep in mind that `Capybara`'s driver, `selenium`, requires you to have
 Firefox installed on your computer.
 
-`Capybara's` uses selenium` as it's default browser. After a lot of slow and
+`Capybara` uses `selenium` as it's default browser. After a lot of slow and
 painful debugging to get another driver, `poltergeist` (faster and headless),
 working without errors on OS X 10.11, the tests fail on an expectation that
 passes with `selenium`, and I can't figure out why. It fails on expecting a
