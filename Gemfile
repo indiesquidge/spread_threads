@@ -24,5 +24,8 @@ group :development, :test do
   gem "pry-rails"
   gem "rspec_api_documentation"
   gem "database_cleaner"
+  gem "fabrication"
+  gem "capybara"
+  gem "selenium-webdriver"
 end
 
